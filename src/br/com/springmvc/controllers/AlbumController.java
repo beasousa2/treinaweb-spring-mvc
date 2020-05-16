@@ -18,15 +18,15 @@ public class AlbumController {
 	@RequestMapping(value = "/adicionar", method = RequestMethod.GET )
 	public String add(Model model) {
 		model.addAttribute("album", new Album());
-		return "albuns/adicionar";
+		return "album.adicionar.tiles";
 	}
 	
 	@RequestMapping(value = "/adicionar", method = RequestMethod.POST )
 	public String add(@ModelAttribute("album") @Valid Album newAlbum, BindingResult result, Model model) {
 		if (result.hasErrors()) {
-			return "albuns/adicionar";
+			return "album.adicionar.tiles";
 		}
 		model.addAttribute("album", newAlbum);
-		return "albuns/exibir";
+		return "album.exibir.tiles";
 	}
 }
