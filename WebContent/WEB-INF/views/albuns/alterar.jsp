@@ -3,10 +3,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="j" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>    
 
-	<j:url var="actionChange" value="/albuns/alterarr" ></j:url>
+	<j:url var="actionChange" value="/albuns/alterar" ></j:url>
 	
 	<div>
-		<h3 class="text-center h3 text-primary">Alterar Álbum ${album.name}</h3>
+		<h3 class="text-center h3 text-primary">Alterar Álbum ${album.albumName}</h3>
 	
 		<f:form action="${actionChange}" method="POST" modelAttribute="album">
 			<div class="row">

@@ -14,8 +14,8 @@
 				role="button" data-toggle="dropdown" aria-haspopup="true"
 				aria-expanded="false"> Álbuns </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Listar</a> 
-						<a class="dropdown-item" href="#">Cadastrar</a>
+						<a class="dropdown-item" href="/TreinawebSpringMVC/albuns/listar">Listar</a> 
+						<a class="dropdown-item" href="/TreinawebSpringMVC/albuns/adicionar">Cadastrar</a>
 					</div>
 			</li>
 			<li class="nav-item dropdown">
@@ -23,8 +23,8 @@
 				role="button" data-toggle="dropdown" aria-haspopup="true"
 				aria-expanded="false"> Músicas </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Listar</a> 
-						<a class="dropdown-item" href="#">Cadastrar</a>
+						<a class="dropdown-item" href="/TreinawebSpringMVC/musicas/listarMusica">Listar</a> 
+						<a class="dropdown-item" href="/TreinawebSpringMVC/musicas/adicionarMusica">Cadastrar</a>
 					</div>
 			</li>
 		</ul>

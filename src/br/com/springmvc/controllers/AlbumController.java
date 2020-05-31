@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.com.springmvc.domains.Album;
-import br.com.springmvc.repositories.AlbumRepositorie;
+import br.com.springmvc.repositories.AlbumRepository;
 
 @Controller
 @RequestMapping("/albuns")
 public class AlbumController {
 	
 	@Autowired 
-	private AlbumRepositorie repositorie;
+	private AlbumRepository repositorie;
 	
 	@RequestMapping(value = "/listar", method = RequestMethod.GET)
 	public String listAlbum(Model model){
@@ -31,7 +31,7 @@ public class AlbumController {
 		return "album.listar.tiles";
 	}
 	
-	@RequestMapping(value = "/alterar/(id)", method = RequestMethod.GET)
+	@RequestMapping(value = "/alterar/{id}", method = RequestMethod.GET)
 	public String changeAlbum(@PathVariable("id") Long id, Model model) {
 		Optional<Album> albumToBeChanged = repositorie.findById(id);
 		if(albumToBeChanged.isPresent()){
@@ -66,7 +66,7 @@ public class AlbumController {
 		return "redirect:/albuns/listar";
 	}
 	
-	@RequestMapping(value = "/excluir/(id)", method = RequestMethod.GET)
+	@RequestMapping(value = "/excluir/{id}", method = RequestMethod.GET)
 	public String deleteALbum(@PathVariable("id") Long id) {
 		repositorie.deleteById(id);
 		return "redirect:/albuns/listar";

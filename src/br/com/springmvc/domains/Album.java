@@ -3,11 +3,16 @@ package br.com.springmvc.domains;
 
 
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -34,6 +39,9 @@ public class Album {
 //	@Min(value=1900, message = "Ano inferior a 1900")
 	@Column(name = "alb_release_year", nullable = false)
 	private int releaseYear;
+	
+	@OneToMany(mappedBy = "album", fetch = FetchType.EAGER, cascade = CascadeType.MERGE, orphanRemoval = true)
+	private Set<Music> music;
 
 	public long getId() {
 		return id;
@@ -58,5 +66,15 @@ public class Album {
 	public void setReleaseYear(int releaseYear) {
 		this.releaseYear = releaseYear;
 	}
+
+	public Set<Music> getMusic() {
+		return music;
+	}
+
+	public void setMusic(Set<Music> music) {
+		this.music = music;
+	}
+	
+	
 
 }

@@ -23,7 +23,7 @@
 	<div style="width: 100%" class="container mt-5" >
 		<tiles:insertAttribute name="body" ignore="false"></tiles:insertAttribute>
 	</div>
-	<div style="width: 100%" >
+	<div style="width: 100%" class="mt-5">
 		<tiles:insertAttribute name="footer" ignore="false"></tiles:insertAttribute>
 	</div>
 </body>

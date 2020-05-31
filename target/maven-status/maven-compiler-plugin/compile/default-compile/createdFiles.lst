@@ -1,0 +1,7 @@
+br\com\springmvc\repositories\MusicRepository.class
+br\com\springmvc\repositories\AlbumRepository.class
+br\com\springmvc\controllers\AlbumController.class
+br\com\springmvc\controllers\HelloController.class
+br\com\springmvc\domains\Music.class
+br\com\springmvc\controllers\MusicController.class
+br\com\springmvc\domains\Album.class

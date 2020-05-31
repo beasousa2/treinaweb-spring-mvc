@@ -22,4 +22,17 @@
 		<put-attribute name="title" value="TreinaWebMVC | Todos os Album"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/albuns/listar.jsp"></put-attribute>
 	</definition>
+	<!-- ** Musica ** -->
+	<definition name="music.adicionar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="TreinaWebMVC | Adicionar Musica"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/musicas/adicionar.jsp"></put-attribute>
+	</definition>
+	<definition name="music.alterar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="TreinaWebMVC | Alterar Musica"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/musicas/alterar.jsp"></put-attribute>
+	</definition>
+	<definition name="music.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="TreinaWebMVC | Todos as Musica"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/musicas/listar.jsp"></put-attribute>
+	</definition>
 </tiles-definitions>
